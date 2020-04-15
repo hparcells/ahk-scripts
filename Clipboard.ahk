@@ -25,6 +25,8 @@ Paste(clipboardID) {
 	Clipboard := ClipboardData%clipboardID%
 	Send ^v
 
+	Sleep 100
+
 	Clipboard := oldClipboard
 	oldClipboard = 
 }
