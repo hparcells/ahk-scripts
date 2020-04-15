@@ -17,9 +17,13 @@
 - **SelectRandomItemInFolder.ahk**: Selects a random file from a folder and returns its file name.
   - Probably not the most efficient code, takes around 1.5 seconds or less on a folder with 5,700 files (for me).
 - **RunCmd.ahk**: Provides `RunCmd()` or `RunBashCmd()`.
+- **GenRandomEmojiString.ahk**: Generates a random string of emojis from the passed array of unicode emojis. Adjust length in the actual script. Could be adapted to generate a random string of other things as well.
+- **ClapText.ahk**: Puts the clapping emoji between every word along with at the beginning and end.
+  - Made for Discord, but might work other places too.
+  - Claps your clipboard contents if nothing is available to select.
 
 ## Others' Included
-- **Tippy2.ahk** and **ChangeExplorerView.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/-9ee39aaccf9c58df9c4a7c19eb7d12ab5223872c/Almost_All_Windows_Functions.ahk
+- **Tippy2.ahk** and **ChangeExplorerView.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/master/Almost_All_Windows_Functions.ahk
 - **BrightnessSetter.ahk** from qwerty12: https://gist.github.com/qwerty12/4b3f41eb61724cd9e8f2bb5cc15c33c2
 - **Gdip.ahk** from tariqporter: https://github.com/tariqporter/Gdip
 - **Clipboard.ahk** from r2997790: https://www.autohotkey.com/boards/viewtopic.php?t=31473
