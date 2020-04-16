@@ -10,17 +10,22 @@
   - **REQUIRES**: RunCmd.ahk
 - **SendTextPreserveClipboard.ahk**: Sends text all at once while preserving your clipboard.
   - **WARNING**: Seems to paste your clipboard when sent in quick succession sometimes.
-- **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.
-  - **REQUIRES**: SendTextPreserveClipboard.ahk
-- **AddDiscordReaction**: Adds a Discord reaction to the latest sent message in the channel.
 - **StdOutToVar.ahk**: Runs a console command and returns the output.
 - **SelectRandomItemInFolder.ahk**: Selects a random file from a folder and returns its file name.
   - Probably not the most efficient code, takes around 1.5 seconds or less on a folder with 5,700 files (for me).
 - **RunCmd.ahk**: Provides `RunCmd()` or `RunBashCmd()`.
+
+**Discord**
+- **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.
+  - **REQUIRES**: SendTextPreserveClipboard.ahk
+- **AddDiscordReaction**: Adds a Discord reaction to the latest sent message in the channel.
+
+**Yes**
 - **GenRandomEmojiString.ahk**: Generates a random string of emojis from the passed array of unicode emojis. Adjust length in the actual script. Could be adapted to generate a random string of other things as well.
 - **ClapText.ahk**: Puts the clapping emoji between every word along with at the beginning and end.
   - Made for Discord, but might work other places too.
   - Claps your clipboard contents if nothing is available to select.
+- **MockText.ahk**: COnveRTS TO mocKiNg casE.
 
 ## Others' Included
 - **Tippy2.ahk** and **ChangeExplorerView.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/master/Almost_All_Windows_Functions.ahk
