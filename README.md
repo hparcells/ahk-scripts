@@ -14,6 +14,7 @@
 - **SelectRandomItemInFolder.ahk**: Selects a random file from a folder and returns its file name.
   - Probably not the most efficient code, takes around 1.5 seconds or less on a folder with 5,700 files (for me).
 - **RunCmd.ahk**: Provides `RunCmd()` or `RunBashCmd()`.
+- **GetColorAtCursor.ahk**: Gets the color under the cursor in #RRGGBB format.
 
 **Discord**
 - **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.
