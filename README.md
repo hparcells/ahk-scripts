@@ -27,6 +27,7 @@
   - Made for Discord, but might work other places too.
   - Claps your clipboard contents if nothing is available to select.
 - **MockText.ahk**: COnveRTS TO mocKiNg casE.
+- **SpaceText.ahk**: O h   y e a h   s p a c e .
 
 ## Others' Included
 - **Tippy2.ahk** and **ChangeExplorerView.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/master/Almost_All_Windows_Functions.ahk
