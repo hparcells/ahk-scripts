@@ -1,7 +1,7 @@
 # AHK Scripts
 > A collection of useful AHK scripts.
 
-**Some of these scripts are not made by me.**
+***Some of these scripts are not made by me.***
 
 ## My Scripts
 - **OpenOrFocus.ahk**: Opens a new chrome tab or focuses it if it exists.
