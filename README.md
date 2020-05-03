@@ -15,6 +15,8 @@
   - Probably not the most efficient code, takes around 1.5 seconds or less on a folder with 5,700 files (for me).
 - **RunCmd.ahk**: Provides `RunCmd()` or `RunBashCmd()`.
 - **GetColorAtCursor.ahk**: Gets the color under the cursor in #RRGGBB format.
+- **PasteImage.ahk**: Pastes an image from a file path.
+  - **REQUIRES**: Gdip.ahk
 
 **Discord**
 - **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.
@@ -29,6 +31,11 @@
 - **MockText.ahk**: COnveRTS TO mocKiNg casE.
 - **SpaceText.ahk**: O h   y e a h   s p a c e .
 
+**Usable By Me Only** (*might be able to use, probably not*)
+- **SendOther.ahk**: Sends a URL or pastes an image from a file path if it is in the other archive.
+  - **REQUIRES**: SendTextPreserveClipboard.ahk
+  - **REQUIRES**: PasteImage.ahk
+
 ## Others' Included
 - **Tippy2.ahk** and **ChangeExplorerView.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/master/Almost_All_Windows_Functions.ahk
 - **BrightnessSetter.ahk** from qwerty12: https://gist.github.com/qwerty12/4b3f41eb61724cd9e8f2bb5cc15c33c2
@@ -37,3 +44,4 @@
 - **CreateFolderHierarchy.ahk** and SelectByRegEx from Shrikant: https://sharats.me/posts/-the-magic-of-autohotkey-2/
 - **Explorer.ahk** from Rapte_Of_Suzaku: https://autohotkey.com/board/topic/-60985-get-paths-of-selected-items-in-an-explorer-window/
 - **UnzipLatest.ahk** by u/detectretract: https://www.reddit.com/r/AutoHotkey/comments/6apkou/extract_last_downloaded_file_with_7z_ahk/
+- **VirtualDesktopAccessor.dll** by Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor

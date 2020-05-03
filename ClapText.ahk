@@ -2,7 +2,7 @@
   WinGet, windowId, ID, A
   WinGetTitle, windowTitle, ahk_id %windowId%
 
-  if(InStr(windowTitle, " - Discord")) {
+  if(WinActive("ahk_exe Discord.exe")) {
     text := StrReplace(text, " ", " :clap: ")
     text := ":clap: " text " :clap:"
   }else {
