@@ -22,6 +22,8 @@
 - **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.
   - **REQUIRES**: SendTextPreserveClipboard.ahk
 - **AddDiscordReaction**: Adds a Discord reaction to the latest sent message in the channel.
+- **SendLatestDiscordMessage.ahk**: Pastes the latest discord message in the channel.
+  - **REQUIRES**: This requires Better Discord to be installed with the Message Utilities plugin.
 
 **Yes**
 - **GenRandomEmojiString.ahk**: Generates a random string of emojis from the passed array of unicode emojis. Adjust length in the actual script. Could be adapted to generate a random string of other things as well.
