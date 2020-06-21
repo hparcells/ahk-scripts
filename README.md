@@ -17,6 +17,8 @@
 - **GetColorAtCursor.ahk**: Gets the color under the cursor in #RRGGBB format.
 - **PasteImage.ahk**: Pastes an image from a file path.
   - **REQUIRES**: Gdip.ahk
+- **Calc.ahk**: Does math.
+  - **REQUIRES**: apcalc
 
 **Discord**
 - **NavigateDiscord.ahk**: Navigates to a Discord channel or DM using its quick switcher.

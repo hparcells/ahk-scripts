@@ -15,7 +15,7 @@ SendLatestDiscordMessage() {
     MouseMove, x, y, 0
 
     Send ^v
-    Sleep 500
+    Sleep 100
     Clipboard := SavedClipboard
   }
 }
