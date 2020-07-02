@@ -49,3 +49,4 @@
 - **Explorer.ahk** from Rapte_Of_Suzaku: https://autohotkey.com/board/topic/-60985-get-paths-of-selected-items-in-an-explorer-window/
 - **UnzipLatest.ahk** by u/detectretract: https://www.reddit.com/r/AutoHotkey/comments/6apkou/extract_last_downloaded_file_with_7z_ahk/
 - **VirtualDesktopAccessor.dll** by Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor
+- **RandomDate.dll** by Gogo: https://autohotkey.com/board/topic/81996-random-date-function/?p=521171
