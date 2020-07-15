@@ -4,22 +4,20 @@
 NavigateDiscord(target) {
 	if(!WinExist("ahk_exe Discord.exe")) {
 		Run, C:\Users\Hunter\AppData\Local\Discord\Update.exe --processStart Discord.exe
-		Sleep 500
+		WinWait, ahk_exe Discord.exe,, 5
 	}
 	if(!WinActive("ahk_exe Discord.exe")) {
 		WinActivate ahk_exe Discord.exe
-		Sleep 100
+		WinWait, ahk_exe Discord.exe,, 5
 	}
 	if(WinActive("ahk_exe Discord.exe")) {
 		WinGetTitle, title, ahk_exe Discord.exe
 		if(!InStr(title, target)) {
-			Sleep 100
-			SetKeyDelay, 50
 			Send ^k
-			Sleep 50
+			Sleep 100
 			SendTextPreserveClipboard(target)
+			Sleep 100
 			Send {Enter}
-			SetKeyDelay, -1
 		}
 	}
 }
