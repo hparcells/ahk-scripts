@@ -45,8 +45,10 @@
 - **BrightnessSetter.ahk** from qwerty12: https://gist.github.com/qwerty12/4b3f41eb61724cd9e8f2bb5cc15c33c2
 - **Gdip.ahk** from tariqporter: https://github.com/tariqporter/Gdip
 - **Clipboard.ahk** from r2997790: https://www.autohotkey.com/boards/viewtopic.php?t=31473
-- **CreateFolderHierarchy.ahk** and SelectByRegEx from Shrikant: https://sharats.me/posts/-the-magic-of-autohotkey-2/
+- **BatchRename.ahk** from Shrikant: https://sharats.me/posts/the-magic-of-autohotkey-2
+- **CreateFolderHierarchy.ahk** from Shrikant: https://sharats.me/posts/the-magic-of-autohotkey-2
+- **SelectByRegEx.ahk** from Shrikant: https://sharats.me/posts/the-magic-of-autohotkey-2
 - **Explorer.ahk** from Rapte_Of_Suzaku: https://autohotkey.com/board/topic/-60985-get-paths-of-selected-items-in-an-explorer-window/
 - **UnzipLatest.ahk** by u/detectretract: https://www.reddit.com/r/AutoHotkey/comments/6apkou/extract_last_downloaded_file_with_7z_ahk/
 - **VirtualDesktopAccessor.dll** by Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor
-- **RandomDate.dll** by Gogo: https://autohotkey.com/board/topic/81996-random-date-function/?p=521171
+- **RandomDate.ahk** by Gogo: https://autohotkey.com/board/topic/81996-random-date-function/?p=521171
