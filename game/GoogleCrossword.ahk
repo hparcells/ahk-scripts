@@ -1,5 +1,5 @@
-SolveCrossword() {
-  SetKeyDelay, -1
+SolveCrossword(delay = 10) {
+  SetKeyDelay, delay
   Send fun
   Send {Tab}
   Send ado

@@ -70,9 +70,6 @@ GuiEscape:
 	Gui, Destroy
 	Return
 
-; ( ͡° ͜ʖ ͡°)
-#include sensitive.ahk
-
 ; PLEASE DELETE THESE IF YOU ARE NOT USING THESE
 #include kb/kb1.ahk
 #include kb/kb2.ahk
