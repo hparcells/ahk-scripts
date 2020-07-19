@@ -3,42 +3,42 @@
 #SingleInstance force
 #MaxHotkeysPerInterval 42069
 
-#include chrome/OpenOrFocus.ahk
+#include chrome/open-or-focus.ahk
 
-#include cmd/RunCmd.ahk
-#include cmd/StdOutToVar.ahk
+#include cmd/run-cmd.ahk
+#include cmd/std-out-to-var.ahk
 
-#include discord/AddDiscordReaction.ahk
-#include discord/SendLatestDiscordMessage.ahk
-#include discord/NavigateDiscord.ahk
+#include discord/add-discord-reaction.ahk
+#include discord/send-latest-discord-message.ahk
+#include discord/navigate-discord.ahk
 
-#include explorer/SelectRandomItemInFolder.ahk
-#include explorer/UnzipLatest.ahk
-#include explorer/CreateFolderHierarchy.ahk
-#include explorer/Explorer.ahk
-#include explorer/SelectByRegEx.ahk
-#include explorer/ChangeExplorerView.ahk
-#include explorer/PasteImage.ahk
+#include explorer/select-random-item-in-folder.ahk
+#include explorer/upzip-latest.ahk
+#include explorer/create-folder-hierarchy.ahk
+#include explorer/explorer-getters.ahk
+#include explorer/select-by-regex.ahk
+#include explorer/change-explorer-view.ahk
+#include explorer/paste-image.ahk
 
-#include game/GoogleCrossword.ahk
+#include game/google-crossword.ahk
 
-#include lib/Gdip.ahk
+#include lib/gdip.ahk
 
-#include personal/SendOther.ahk
+#include personal/send-other.ahk
 
-#include random/RandomDate.ahk
+#include random/random-date.ahk
 
-#include text/SendTextPreserveClipboard.ahk
-#include text/GenRandomEmojiString.ahk
-#include text/ClapText.ahk
-#include text/MockText.ahk
-#include text/SpaceText.ahk
+#include text/send-text-preserve-clipboard.ahk
+#include text/gen-random-emoji-string.ahk
+#include text/clap-text.ahk
+#include text/mock-text.ahk
+#include text/space-text.ahk
 
-#include util/GetColorAtCursor.ahk
-#include util/BrightnessSetter.ahk
-#include util/Tippy2.ahk
-#include util/Clipboard.ahk
-#include util/Calc.ahk
+#include util/get-color-at-cursor.ahk
+#include util/brightness-setter.ahk
+#include util/tippy2.ahk
+#include util/clipboard.ahk
+#include util/calc.ahk
 
 ; Force run as admin.
 if(!A_IsAdmin) {
@@ -54,7 +54,7 @@ WinHide % "ahk_id " DllCall("GetConsoleWindow", "ptr")
 Brightness := new BrightnessSetter()
 
 ; Virtual Desktop Accessor
-hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "lib/VirtualDesktopAccessor.dll", "Ptr") 
+hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "lib/virtual-desktop-accessor.dll", "Ptr") 
 GoToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GoToDesktopNumber", "Ptr")
 GetCurrentDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GetCurrentDesktopNumber", "Ptr")
 MoveWindowToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "MoveWindowToDesktopNumber", "Ptr")
