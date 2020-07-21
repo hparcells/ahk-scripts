@@ -17,16 +17,25 @@
 #include explorer/create-folder-hierarchy.ahk
 #include explorer/explorer-getters.ahk
 #include explorer/select-by-regex.ahk
-#include explorer/change-explorer-view.ahk
+#include explorer/change-explorer-icon-size.ahk
 #include explorer/paste-image.ahk
+#include explorer/change-explorer-sort.ahk
+#include explorer/toggle-hidden-items.ahk
+#include explorer/toggle-desktop-items.ahk
 
 #include game/google-crossword.ahk
+
+#include gsuite/docs-hanging-indent.ahk
+#include gsuite/sheets-clone-row.ahk
+#include gsuite/gsuite-new.ahk
 
 #include lib/gdip.ahk
 
 #include personal/send-other.ahk
 
 #include random/random-date.ahk
+#include random/random-uuid.ahk
+#include random/random-color.ahk
 
 #include text/send-text-preserve-clipboard.ahk
 #include text/gen-random-emoji-string.ahk
@@ -39,6 +48,7 @@
 #include util/tippy2.ahk
 #include util/clipboard.ahk
 #include util/calc.ahk
+#include util/lock-and-turn-off-screens.ahk
 
 ; Force run as admin.
 if(!A_IsAdmin) {

@@ -5,5 +5,7 @@ GetColorAtCursor() {
   color := SubStr(color, 3)
   color := "#" color
 
+  StringLower, color, color
+
   Return color
 }

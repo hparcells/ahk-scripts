@@ -1,6 +1,8 @@
 ; https://github.com/TaranVH/2nd-keyboard/blob/9ee39aaccf9c58df9c4a7c19eb7d12ab5223872c/Almost_All_Windows_Functions.ahk
 
-ChangeExplorerView(explorerWindow) {
+ChangeExplorerIconSize() {
+	explorerWindow := WinActive("ahk_class CabinetWClass")
+
 	if(!explorerWindow) {
 		Return
 	}
