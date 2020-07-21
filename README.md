@@ -53,6 +53,10 @@
 - **get-color-at-cursor.ahk**: Gets the color under the cursor in #RRGGBB format.
 - **calc.ahk**: Does math.
   - **REQUIRES**: apcalc
+  - **REQUIRES**: cmd/run-cmd.ahk
+- **trim-video.ahk**: Trims video, given a starting timestamp and an ending timestamp.
+  - **REQUIRES**: cmd/run-cmd.ahk
+  - **REQUIRES**: ffmpeg
 
 **Usable By Me Only** (*might be able to use, probably not*)
 - **send-other.ahk**: Sends a URL or pastes an image from a file path if it is in the other archive.
@@ -68,6 +72,7 @@
 - **explorer/unzip-latest.ahk** by u/detectretract: https://www.reddit.com/r/AutoHotkey/comments/6apkou/extract_last_downloaded_file_with_7z_ahk/
 - **explorer/toggle-hidden-items.ahk** by u/yet_another_usr: https://www.reddit.com/r/AutoHotkey/comments/4w31kq/toggle_hidden_filesdir_on_off/d6677kk
 - **explorer/toggle-desktop-items.ahk** by hachi: https:////autohotkey.com/board/topic/99089-showhide-desktop-icons-shortcut-unreliable/?p=622531
+- **explorer/get-path-of-selected.ahk** by teadrinker: https://www.autohotkey.com/boards/viewtopic.php?style=17&t=60403
 - **lib/gdip.ahk** from tariqporter: https://github.com/tariqporter/Gdip
 - **lib/virtual-desktop-accessor.dll** by Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor
 - **random/random-date.ahk** by Gogo: https://autohotkey.com/board/topic/81996-random-date-function/?p=521171

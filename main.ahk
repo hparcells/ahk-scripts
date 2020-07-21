@@ -22,6 +22,7 @@
 #include explorer/change-explorer-sort.ahk
 #include explorer/toggle-hidden-items.ahk
 #include explorer/toggle-desktop-items.ahk
+#include explorer/get-path-of-selected.ahk
 
 #include game/google-crossword.ahk
 
@@ -49,16 +50,13 @@
 #include util/clipboard.ahk
 #include util/calc.ahk
 #include util/lock-and-turn-off-screens.ahk
+#include util/trim-video.ahk
 
 ; Force run as admin.
 if(!A_IsAdmin) {
 	Run *RunAs "%A_ScriptFullPath%"
 	ExitApp
 }
-
-; Hide the console.
-DllCall("AllocConsole")
-WinHide % "ahk_id " DllCall("GetConsoleWindow", "ptr")
 
 ; BrightnessSetter
 Brightness := new BrightnessSetter()
