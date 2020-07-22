@@ -1,28 +1,16 @@
 StdOutToVar(command) {
-    DllCall("AllocConsole")
-    console := DllCall("GetConsoleWindow")
-    WinHide % "ahk_id " console
+  shell := ComObjCreate("WScript.Shell")
+  exec := shell.Exec(ComSpec " /C " command)
 
-    shell := ComObjCreate("WScript.Shell")
-    exec := shell.Exec(ComSpec " /C " command)
+  result := exec.StdOut.ReadAll()
 
-    result := exec.StdOut.ReadAll()
-
-    DllCall("FreeConsole")
-
-    return result
+  return result
 }
-BashStdOutToVar(command) {
-    DllCall("AllocConsole")
-    console := DllCall("GetConsoleWindow")
-    WinHide % "ahk_id " console
-   
-    shell := ComObjCreate("WScript.Shell")
-    exec := shell.Exec("bash.exe -c """ command """")
-    
-    result := exec.StdOut.ReadAll()
+BashStdOutToVar(command) {   
+  shell := ComObjCreate("WScript.Shell")
+  exec := shell.Exec("bash.exe -c """ command """")
 
-    DllCall("FreeConsole")
+  result := exec.StdOut.ReadAll()
 
-    return result
+  return result
 }

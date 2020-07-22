@@ -58,6 +58,11 @@ if(!A_IsAdmin) {
 	ExitApp
 }
 
+; This console thing.
+DllCall("AllocConsole")
+console := DllCall("GetConsoleWindow")
+WinHide % "ahk_id " console
+
 ; BrightnessSetter
 Brightness := new BrightnessSetter()
 
