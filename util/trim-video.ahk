@@ -7,9 +7,7 @@ trimVideo() {
   InputBox, start, Trim Video, Starting timestamp.,,200, 130
   InputBox, ending, Trim Video, Ending timestamp.,,200, 130
 
-  SplitPath, filePath,, dir
-
-  command := "ffmpeg -y -t " . ending . " -i " . filePath . " -ss " . start . " " . outputPath
+  command := "ffmpeg -y -t " . ending . " -i """ . filePath . """ -ss " . start . " """ . outputPath . """"
 
   RunCmdWait(command)
 
