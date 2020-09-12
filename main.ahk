@@ -81,7 +81,7 @@ GroupAdd, notepads, ahk_exe notepad.exe
 ; Handle Escape press in GUI
 GuiEscape:
 	Gui, Destroy
-	Return
+	return
 
 ; PLEASE DELETE THESE IF YOU ARE NOT USING THESE
 #include kb/kb1.ahk

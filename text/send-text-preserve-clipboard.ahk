@@ -1,4 +1,4 @@
-SendTextPreserveClipboard(text) {
+sendTextPreserveClipboard(text) {
 	savedClipboard := ClipboardAll
 	Clipboard := text
 	Send ^v

@@ -16,10 +16,10 @@ ShowGui() {
     Gui, Margin, 6, 6
     Gui, +Owner%active_hwnd%
     Gui, Add, Text, , Search pattern:
-    Gui, Add, Edit, r1 w300 vSourcePattern gInputChanged -WantReturn X+6 Section
+    Gui, Add, Edit, r1 w300 vSourcePattern gInputChanged -Wantreturn X+6 Section
     Gui, Add, Text, X+6, Full regex is supported
     Gui, Add, Text, XM, Replacement:
-    Gui, Add, Edit, r1 w300 vTargetPattern gInputChanged -WantReturn XS YP
+    Gui, Add, Edit, r1 w300 vTargetPattern gInputChanged -Wantreturn XS YP
     Gui, Add, Text, X+6, Use $1, $2, ${10}, ${named}, $U1, $U{10}, $L2, $T0 etc.
     Gui, Add, Button, Default gDoRename XM w80, Apply
     Gui, Add, Button, gShowHelp X+6 w80, Help
@@ -79,7 +79,7 @@ uriDecode(str) {
         If RegExMatch(str, "i)(?<=%)[\da-f]{1,2}", hex)
             StringReplace, str, str, `%%hex%, % Chr("0x" . hex), All
         Else Break
-    Return, str
+    return, str
 }
 
 ShowHelp() {

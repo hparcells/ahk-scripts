@@ -1,4 +1,4 @@
-GenRandomEmojiString(emojis) {
+genRandomEmojiString(emojis) {
   Random, length, 3, 7
   string := ""
 
@@ -9,5 +9,5 @@ GenRandomEmojiString(emojis) {
     string := string emojis[emoji]
   }
 
-  Return string
+  return string
 }

@@ -9,7 +9,7 @@ trimVideo() {
 
   command := "ffmpeg -y -t " . ending . " -i """ . filePath . """ -ss " . start . " """ . outputPath . """"
 
-  RunCmdWait(command)
+  runCmdWait(command)
 
   MsgBox,, Trim Video, Done!
 }

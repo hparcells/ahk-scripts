@@ -1,4 +1,4 @@
-StdOutToVar(command) {
+stdOutToVar(command) {
   shell := ComObjCreate("WScript.Shell")
   exec := shell.Exec(ComSpec " /C " command)
 
@@ -6,7 +6,7 @@ StdOutToVar(command) {
 
   return result
 }
-BashStdOutToVar(command) {   
+bashStdOutToVar(command) {   
   shell := ComObjCreate("WScript.Shell")
   exec := shell.Exec("bash.exe -c """ command """")
 

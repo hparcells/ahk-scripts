@@ -1,6 +1,6 @@
 ; REQUIRES Gdip.ahk
 
-PasteImage(filePath) {
+pasteImage(filePath) {
   savedClipboard := ClipboardAll
 
   pToken := Gdip_Startup()

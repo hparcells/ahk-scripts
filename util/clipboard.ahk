@@ -1,6 +1,6 @@
 ; https://www.autohotkey.com/boards/viewtopic.php?t=31473
 
-Copy(clipboardID) {
+copy(clipboardID) {
 	global
 	local oldClipboard := ClipboardAll
 	
@@ -10,7 +10,7 @@ Copy(clipboardID) {
 	ClipWait, 2, 1
 	if(ErrorLevel) {
 		Clipboard := oldClipboard
-		Return
+		return
 	}
 	
 	ClipboardData%clipboardID% := ClipboardAll
@@ -18,7 +18,7 @@ Copy(clipboardID) {
 	Clipboard := oldClipboard
 }
 
-Paste(clipboardID) {
+paste(clipboardID) {
 	global
 	local oldClipboard := ClipboardAll
 

@@ -4,7 +4,7 @@
 ; Copy raw text in Message Utilities must be set to double click for this script to work unmodified.
 ; You may have to change the coords on line 12.
 
-SendLatestDiscordMessage() {
+sendLatestDiscordMessage() {
   if(WinActive("ahk_exe Discord.exe")) {
     SavedClipboard := ClipboardAll
 

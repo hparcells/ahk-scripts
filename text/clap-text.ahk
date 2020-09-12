@@ -1,4 +1,4 @@
-﻿ClapText(text) {
+﻿clapText(text) {
   WinGet, windowId, ID, A
   WinGetTitle, windowTitle, ahk_id %windowId%
 
@@ -10,5 +10,5 @@
     text := "👏 " text " 👏"
   }
 
-  Return text
+  return text
 }

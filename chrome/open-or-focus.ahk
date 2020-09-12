@@ -3,10 +3,10 @@
 ; REQUIRES RunCmd.ahk
 
 OpenOrFocus(url) {
-	tabs := StdOutToVar("bash.exe -c ""chromix-too ls""")
+	tabs := stdOutToVar("bash.exe -c ""chromix-too ls""")
 
 	if(InStr(tabs, url)) {
-		RunBashCmd("chromix-too focus " url)
+		runBashCmd("chromix-too focus " url)
 	} else {
 		Run, %url%
 	}	

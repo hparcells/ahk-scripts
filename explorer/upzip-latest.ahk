@@ -2,7 +2,7 @@
 ; REQUIRES 7-Zip
 ; Change the path on line 6 to your browser's default download folder.
 
-UnzipLatest() {
+unzipLatest() {
 	Folder:="C:\Users\Hunter\Desktop"
 	 Loop, %Folder%\* {
 		 FileGetTime, Time, %A_LoopFileFullPath%, C

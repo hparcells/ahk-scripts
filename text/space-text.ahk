@@ -1,4 +1,4 @@
-SpaceText(text) {
+spaceText(text) {
   spacedWord := ""
 
   For i, character In StrSplit(text)
@@ -6,5 +6,5 @@ SpaceText(text) {
 
   spacedWord := LTrim(spacedWord)
 
-  Return spacedWord
+  return spacedWord
 }

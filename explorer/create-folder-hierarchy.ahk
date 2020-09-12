@@ -1,7 +1,7 @@
 ; https://sharats.me/posts/the-magic-of-autohotkey-2/
 ; REQUIRES Explorer.ahk
 
-CreateFolderHierarchy() {
+createFolderHierarchy() {
 	if(WinActive("ahk_group explorers")) {
 		loc := Explorer_GetPath()
 		WinGetPos, wx, wy
@@ -11,7 +11,7 @@ CreateFolderHierarchy() {
 		InputBox, folder, Create Folder, Enter folder path to create:, , 400, 130
 			, %x%, %y%
 		if(ErrorLevel) {
-			Return
+			return
 		}
 
 		folder := StrReplace(folder, "/", "\")

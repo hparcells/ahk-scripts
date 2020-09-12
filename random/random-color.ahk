@@ -3,5 +3,5 @@ randomColor() {
 	color := Format("{:06X}", vRand)
   StringLower, color, color
 
-  SendTextPreserveClipboard("#" + color)
+  sendTextPreserveClipboard("#" + color)
 }

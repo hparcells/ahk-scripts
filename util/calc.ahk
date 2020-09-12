@@ -1,9 +1,9 @@
 ﻿; REQUIRES: apcalc
 
-Calc(expression) {
-    StringReplace, expression, expression, %A_Space%,, All
+calc(expression) {
+  StringReplace, expression, expression, %A_Space%,, All
 
-		answer := BashStdOutToVar("calc '" expression "' | tr -d '[:space:]'")
+  answer := bashStdOutToVar("calc '" expression "' | tr -d '[:space:]'")
 
-    Return answer
+  return answer
 }

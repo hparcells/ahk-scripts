@@ -1,19 +1,19 @@
 ; REQUIRES SendTextPreserveClipboard.ahk
 ; REQUIRES PasteImage.ahk
 
-SendOther(fullFilePath) {
+sendOther(fullFilePath) {
   SplitPath, fullFilePath, fileName,, ext
 
   if(ext = "png" || ext = "jpg" || ext = "jpeg" || ext = "webp" || ext = "gif") {
-    if(FileExist("C:\Users\Hunter\Box Sync\meme.imfast.io\" fileName)) {
-      SendTextPreserveClipboard("https://other.davecode.me/" fileName)
+    if(FileExist("E:\Meme Library\Other\public\" fileName)) {
+      sendTextPreserveClipboard("https://other.davecode.me/" fileName)
     }else {
-      PasteImage(fullFilePath)
+      pasteImage(fullFilePath)
     }
-  }else if(FileExist("C:\Users\Hunter\Box Sync\meme.imfast.io\" fileName)) {
-    SendTextPreserveClipboard("https://other.davecode.me/" fileName)
+  }else if(FileExist("E:\Meme Library\Other\public\" fileName)) {
+    sendTextPreserveClipboard("https://other.davecode.me/" fileName)
   }else if(ext = "txt") {
     FileRead, text, %fullFilePath%
-    SendTextPreserveClipboard(text)
+    sendTextPreserveClipboard(text)
   }
 }

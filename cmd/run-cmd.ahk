@@ -1,12 +1,12 @@
-RunCmd(command) {
+runCmd(command) {
   Run, %ComSpec% /c "%command%",, Hide
 }
-RunCmdWait(command) {
+runCmdWait(command) {
   RunWait, %ComSpec% /c "%command%",, Hide
 }
-RunBashCmd(command) {
+runBashCmd(command) {
   Run, bash.exe -c "%command%",, Hide
 }
-RunBashCmdWait(command) {
+runBashCmdWait(command) {
   RunWait, bash.exe -c "%command%",, Hide
 }

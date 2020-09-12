@@ -1,7 +1,7 @@
 ; REQUIRES SendTextPreserveClipboard.ahk
 ; Change path on line 6 to your Discord installation.
 
-NavigateDiscord(target) {
+navigateDiscord(target) {
 	if(!WinExist("ahk_exe Discord.exe")) {
 		Run, C:\Users\Hunter\AppData\Local\Discord\Update.exe --processStart Discord.exe
 		WinWait, ahk_exe Discord.exe,, 5
@@ -15,7 +15,7 @@ NavigateDiscord(target) {
 		if(!InStr(title, target)) {
 			Send ^k
 			Sleep 100
-			SendTextPreserveClipboard(target)
+			sendTextPreserveClipboard(target)
 			Sleep 100
 			Send {Enter}
 		}

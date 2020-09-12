@@ -1,6 +1,6 @@
 ; https://sharats.me/posts/the-magic-of-autohotkey-2/
 
-SelectByRegEx() {
+selectByRegEx() {
 	if(WinActive("ahk_group explorers")) {
 		static selectionPattern := ""
 		WinGetPos, wx, wy
@@ -11,7 +11,7 @@ SelectByRegEx() {
 			, Enter regex pattern to select files that contain it:
 			, , 400, 140, %x%, %y%, , , %selectionPattern%
 		if(ErrorLevel) {
-			Return
+			return
 		}
 		for window in ComObjCreate("Shell.Application").Windows {
 			if(WinActive("ahk_id " . window.hwnd)) {

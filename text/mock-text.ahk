@@ -1,4 +1,4 @@
-MockText(text) {
+mockText(text) {
   textToMock := StrSplit(text, "")
 
   mocked := ""
@@ -16,5 +16,5 @@ MockText(text) {
     mocked := mocked outputCharacter
   }
 
-  Return mocked
+  return mocked
 }

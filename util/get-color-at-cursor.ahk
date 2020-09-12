@@ -1,4 +1,4 @@
-GetColorAtCursor() {
+getColorAtCursor() {
   MouseGetPos x, y
   PixelGetColor color, %x%, %y%, RGB
   
@@ -7,5 +7,5 @@ GetColorAtCursor() {
 
   StringLower, color, color
 
-  Return color
+  return color
 }

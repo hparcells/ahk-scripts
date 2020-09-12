@@ -4,7 +4,7 @@ newDoc() {
   
   if(InStr(windowTitle, "Google Drive")) {
     Send +t;
-    Return
+    return
   }
   Run, "https://docs.google.com/document/u/0/create"
 }
@@ -14,7 +14,7 @@ newSheet() {
 
   if(InStr(windowTitle, "Google Drive")) {
     Send +s
-    Return
+    return
   }
   Run, "https://docs.google.com/spreadsheets/u/0/create"
 }

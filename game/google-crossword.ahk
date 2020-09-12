@@ -1,4 +1,4 @@
-SolveCrossword(delay = 10) {
+solveCrossword(delay = 10) {
   SetKeyDelay, delay
   Send fun
   Send {Tab}

@@ -7,11 +7,11 @@
 **Chrome**
 - **open-or-focus.ahk**: Opens a new chrome tab or focuses it if it exists.
   - **REQUIRES**: [chromix-too](https://www.npmjs.com/package/chromix-too)
-  - **REQUIRES**: StdOutToVar.ahk
-  - **REQUIRES**: RunCmd.ahk
+  - **REQUIRES**: cmd/std-out-to-var.ahk
+  - **REQUIRES**: cmd/run-cmd.ahk
 
 **cmd**
-- **run-cmd.ahk**: Provides `RunCmd()` or `RunBashCmd()`.
+- **run-cmd.ahk**: Provides `runCmd()` or `runBashCmd()`.
 - **std-out-to-var.ahk**: Runs a console command and returns the output.
 
 **Discord**

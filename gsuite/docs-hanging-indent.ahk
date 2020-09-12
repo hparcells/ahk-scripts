@@ -8,12 +8,8 @@ createHangingIndent() {
   Send {Up}
   Send {Enter}
   SetKeyDelay, 10
-  Send {Tab}
-  Send {Tab}
-  Send {Tab}
-  Send {Tab}
-  Send {Up}
-  Send {Up}
+  Send {Tab 4}
+  Send {Up 2}
   Send {Enter}
   Send {Tab}
   Send {Enter}

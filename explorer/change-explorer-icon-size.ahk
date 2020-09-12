@@ -1,10 +1,10 @@
 ; https://github.com/TaranVH/2nd-keyboard/blob/9ee39aaccf9c58df9c4a7c19eb7d12ab5223872c/Almost_All_Windows_Functions.ahk
 
-ChangeExplorerIconSize() {
+changeExplorerIconSize() {
 	explorerWindow := WinActive("ahk_class CabinetWClass")
 
 	if(!explorerWindow) {
-		Return
+		return
 	}
 
 	windows := ComObjCreate("Shell.Application").Windows
@@ -19,19 +19,19 @@ ChangeExplorerIconSize() {
 		sFolder.CurrentViewMode := 1 ;
 		sFolder.IconSize := 48
 
-		Tippy2("Medium Icons")
+		tippy2("Medium Icons")
 	}else if (sFolder.CurrentViewMode == 1) {
 		if(sFolder.IconSize == 256) {
 			sFolder.CurrentViewMode := 4
 	
-			Tippy2("Details")
+			tippy2("Details")
 		}else if (sFolder.IconSize == 48) {
 			sFolder.IconSize := 96
 
-			Tippy2("Large Icons")
+			tippy2("Large Icons")
 		}else {
 			sFolder.IconSize := 256
-			Tippy2("Extra Large Icons")
+			tippy2("Extra Large Icons")
 		}
 	}
 	ObjRelease(windows)

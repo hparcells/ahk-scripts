@@ -8,7 +8,7 @@
 ;#####################################################################################
 ;#####################################################################################
 ; STATUS ENUMERATION
-; Return values for functions specified to have status enumerated return type
+; return values for functions specified to have status enumerated return type
 ;#####################################################################################
 ;
 ; Ok =						= 0
@@ -410,7 +410,7 @@ CreateRect(ByRef Rect, x, y, w, h)
 ; w            			w-value for the SizeF object
 ; h            			h-value for the SizeF object
 ;
-; return      			No Return value
+; return      			No return value
 
 CreateSizeF(ByRef SizeF, w, h)
 {
@@ -426,7 +426,7 @@ CreateSizeF(ByRef SizeF, w, h)
 ; w            			w-value for the SizeF object
 ; h            			h-value for the SizeF object
 ;
-; return      			No Return value
+; return      			No return value
 
 CreatePointF(ByRef PointF, x, y)
 {
@@ -1555,7 +1555,7 @@ Gdip_SaveBitmapToFile(pBitmap, sOutput, Quality=75)
 ; x						x-coordinate of the pixel
 ; y						y-coordinate of the pixel
 ;
-; return				Returns the ARGB value of the pixel
+; return				returns the ARGB value of the pixel
 
 Gdip_GetPixel(pBitmap, x, y)
 {
@@ -1586,7 +1586,7 @@ Gdip_SetPixel(pBitmap, x, y, ARGB)
 ;
 ; pBitmap				Pointer to a bitmap
 ;
-; return				Returns the width in pixels of the supplied bitmap
+; return				returns the width in pixels of the supplied bitmap
 
 Gdip_GetImageWidth(pBitmap)
 {
@@ -1601,7 +1601,7 @@ Gdip_GetImageWidth(pBitmap)
 ;
 ; pBitmap				Pointer to a bitmap
 ;
-; return				Returns the height in pixels of the supplied bitmap
+; return				returns the height in pixels of the supplied bitmap
 
 Gdip_GetImageHeight(pBitmap)
 {
@@ -1804,7 +1804,7 @@ Gdip_CreateHICONFromBitmap(pBitmap)
 Gdip_CreateBitmap(Width, Height, Format=0x26200A)
 {
     DllCall("gdiplus\GdipCreateBitmapFromScan0", "int", Width, "int", Height, "int", 0, "int", Format, A_PtrSize ? "UPtr" : "UInt", 0, A_PtrSize ? "UPtr*" : "uint*", pBitmap)
-    Return pBitmap
+    return pBitmap
 }
 
 ;#####################################################################################
@@ -2124,21 +2124,21 @@ Gdip_TextToGraphics(pGraphics, Text, Options, Font="Arial", Width="", Height="",
 	CreateRectF(RC, xpos, ypos, Width, Height)
 	Gdip_SetStringFormatAlign(hFormat, Align)
 	Gdip_SetTextRenderingHint(pGraphics, Rendering)
-	ReturnRC := Gdip_MeasureString(pGraphics, Text, hFont, hFormat, RC)
+	returnRC := Gdip_MeasureString(pGraphics, Text, hFont, hFormat, RC)
 
 	if vPos
 	{
-		StringSplit, ReturnRC, ReturnRC, |
+		StringSplit, returnRC, returnRC, |
 		
 		if (vPos = "vCentre") || (vPos = "vCenter")
-			ypos += (Height-ReturnRC4)//2
+			ypos += (Height-returnRC4)//2
 		else if (vPos = "Top") || (vPos = "Up")
 			ypos := 0
 		else if (vPos = "Bottom") || (vPos = "Down")
-			ypos := Height-ReturnRC4
+			ypos := Height-returnRC4
 		
-		CreateRectF(RC, xpos, ypos, Width, ReturnRC4)
-		ReturnRC := Gdip_MeasureString(pGraphics, Text, hFont, hFormat, RC)
+		CreateRectF(RC, xpos, ypos, Width, returnRC4)
+		returnRC := Gdip_MeasureString(pGraphics, Text, hFont, hFormat, RC)
 	}
 
 	if !Measure
@@ -2149,7 +2149,7 @@ Gdip_TextToGraphics(pGraphics, Text, Options, Font="Arial", Width="", Height="",
 	Gdip_DeleteStringFormat(hFormat)   
 	Gdip_DeleteFont(hFont)
 	Gdip_DeleteFontFamily(hFamily)
-	return E ? E : ReturnRC
+	return E ? E : returnRC
 }
 
 ;#####################################################################################
