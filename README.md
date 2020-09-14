@@ -23,7 +23,7 @@
 
 **Explorer**
 - **paste-image.ahk**: Pastes an image from a file path.
-  - **REQUIRES**: gdip.ahk
+  - **REQUIRES**: lib/gdip.ahk
 - **select-random-item-in-folder.ahk**: Selects a random file from a folder and returns its file name.
   - Probably not the most efficient code, takes around 1.5 seconds or less on a folder with 5,700 files (for me).
 
@@ -60,8 +60,8 @@
 
 **Usable By Me Only** (*might be able to use, probably not*)
 - **send-other.ahk**: Sends a URL or pastes an image from a file path if it is in the other archive.
-  - **REQUIRES**: SendTextPreserveClipboard.ahk
-  - **REQUIRES**: PasteImage.ahk
+  - **REQUIRES**: text/send-text-preserve-clipboard.ahk
+  - **REQUIRES**: explorer/paste-image.ahk
 
 ## Others' Included
 - **explorer/change-explorer-view.ahk** from TaranVH: https://github.com/TaranVH/2nd-keyboard/blob/master/Almost_All_Windows_Functions.ahk
