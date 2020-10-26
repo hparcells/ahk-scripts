@@ -1,4 +1,4 @@
-runCmd(command) {
+﻿runCmd(command) {
   Run, %ComSpec% /c "%command%",, Hide
 }
 runCmdWait(command) {
