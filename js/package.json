@@ -2,7 +2,8 @@
   "name": "ahk-scripts-js",
   "version": "1.0.0",
   "dependencies": {
-    "clipboardy": "^2.3.0"
+    "clipboardy": "^2.3.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {}
 }
