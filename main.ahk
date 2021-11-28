@@ -53,10 +53,10 @@
 #include util/trim-video.ahk
 
 ; Force run as admin.
-if(!A_IsAdmin) {
-	Run *RunAs "%A_ScriptFullPath%"
-	ExitApp
-}
+; if(!A_IsAdmin) {
+; 	Run *RunAs "%A_ScriptFullPath%"
+; 	ExitApp
+; }
 
 ; This console thing.
 DllCall("AllocConsole")
@@ -85,5 +85,5 @@ GuiEscape:
 
 ; PLEASE DELETE THESE IF YOU ARE NOT USING THESE
 #include kb/kb1.ahk
-#include kb/kb2.ahk
+; #include kb/kb2.ahk
 #include kb/kb3.ahk
