@@ -74,6 +74,10 @@ other() {
     filesSeparated := StrJoin(matchedFiles, "|")
     rows := matchedFiles.Length()
 
+    if(rows > 50) {
+      rows := 50
+    }
+
     ; ...add to ListBox.
     Gui, Add, ListBox, r%rows% vselectedFile, %filesSeparated%
     Gui, Add, Button, default h0 w0 gsubmit,
