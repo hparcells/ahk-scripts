@@ -3,6 +3,14 @@
 
 ***Some of these scripts are not made by me.***
 
+## Install
+This is mainly reference for me when installing things on a new system.
+
+- `npm i -g chromix-too`
+- `chromix-too-server` on startup.
+- `npm i -g lorem-ipsum`
+- `owo-cli` Private Package (`npm link`)
+
 ## My Scripts
 **Chrome**
 - **open-or-focus.ahk**: Opens a new chrome tab or focuses it if it exists.
