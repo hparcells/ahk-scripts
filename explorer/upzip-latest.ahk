@@ -3,7 +3,7 @@
 ; Change the path on line 6 to your browser's default download folder.
 
 unzipLatest() {
-	Folder:="C:\Users\Hunter\Desktop"
+	Folder:="C:\Users\Hunter\Downloads"
 	 Loop, %Folder%\* {
 		 FileGetTime, Time, %A_LoopFileFullPath%, C
 		 if(Time > Time_Orig) {

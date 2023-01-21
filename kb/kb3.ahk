@@ -27,76 +27,18 @@
 		Clipboard := selected
 		tippy2(selected)
 		return
+	SC0D::Run, "C:\Program Files\AutoHotkey\WindowSpy.ahk"
 	Backspace::lockAndTurnOffScreens()
 
 	Tab::OpenOrFocus("http://localhost:8000/")
 	^Tab::Run, "http://localhost:8000/"
 	!Tab::RunBashCmd("chromix-too rm localhost:8000")
-	Q::copy(0)
-	W::copy(1)
-	E::copy(2)
+
 	R::
 		Send ^v
 		Send {Enter}
 		return
-	O::
-		; InputBox, fileName, The Portal™, Enter a location., , 200, 130
-		; fileName := StrReplace(fileName, " ", "-")
-
-		; global files := []
-
-		; if(ErrorLevel) {
-		; 	return
-		; }
-
-		; whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-		; whr.Open("GET", "https://otherzone.net/list.txt", true)
-		; whr.Send()
-		; whr.WaitForResponse()
-		; otherList := StrSplit(whr.ResponseText, "`r`n")
-
-		; for i, other in otherList {
-		; 	match := RegExMatch(other, "^" fileName)
-
-		; 	if(match > 0) {
-		; 		files.Push(other)
-		; 	}
-		; }
-
-		; if(files.MaxIndex() = 1) {
-		; 	foundFile := files[1]
-		; 	SplitPath, foundFile, fileFileName
-		; 	sendOther(fileFileName)
-
-		; 	return
-		; }
-		; if(files.MaxIndex() > 1) {
-		; 	HandleClick() {
-		; 		Gui, Hide
-		; 		sendOther(A_GuiControl)
-		; 		Gui, Destroy
-		; 		return
-		; 	}
-
-		; 	Gui, New,, Select File
-		; 	for i, file in files
-		; 	{
-		; 		SplitPath, file, fileFileName
-
-		; 		if(i = 1) {
-		; 			Gui, Add, Button, Default gHandleClick, %fileFileName%
-		; 		}else {
-		; 			Gui, Add, Button, gHandleClick, %fileFileName%
-		; 		}
-		; 	}
-		; 	Gui, Show
-		; 	return
-		; }
-
-		; MsgBox, "%fileName%" not found.
-
-		other()
-		return
+	O::other()
 	P::sendTextPreserveClipboard(randomUuid())
 	SC1A::Reload
 	SC1B::runCmd("code ""C:\2nd Keyboard""")
@@ -110,9 +52,6 @@
 		Clipboard := color
 
 		return
-	A::paste(0)
-	S::paste(1)
-	D::paste(2)
 	SC28::unzipLatest()
 	Enter::
 		SavedClipboard := Clipboard
@@ -213,9 +152,74 @@
 		WinGet, xPID, PID, A
 		Process, Close, %xPID%
 		return
-	; SC79::WinActivate ahk_exe voicemeeterpro.exe
 
-	SC79::
+	SC7B::
+		if(WinActive("ahk_class CabinetWClass")) {
+			Send +{AppsKey}
+			Send w
+			Send {Enter}
+		}
+		return
+
+	; Clipboards
+	Insert::copy(0)
+	Home::copy(1)
+	PgUp::copy(2)
+	Del::paste(0)
+	End::paste(1)
+	PgDn::paste(2)
+
+	; Folders
+	Up::Run, E:\0. Pool
+	Left::Run, C:\Users\Hunter\Desktop
+	Down::Run, C:\Users\Hunter\Downloads
+	Right::Run, C:\Users\Hunter\Documents
+
+	; OBS
+	; Changing keydelay to 50ms because OBS doesn't like instant keys.
+	NumLock::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumLock}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+	NumpadDiv::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumpadDiv}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+	NumpadMult::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumpadMult}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+	NumpadSub::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumpadSub}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+	NumpadAdd::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumpadAdd}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+	NumpadEnter::
+		SetKeyDelay, -1, 50
+		ControlSend, , ^+!{NumpadEnter}, ahk_exe obs64.exe
+		SetKeyDelay, 10
+		return
+
+	; VoiceMeeter
+	Numpad1::Send ^{Numpad1}
+	Numpad2::Send ^{Numpad2}
+	Numpad3::Send ^{Numpad3}
+	Numpad4::Send ^{Numpad4}
+	Numpad5::Send ^{Numpad5}
+	Numpad6::Send ^{Numpad6}
+	Numpad7::Send ^{Numpad7}
+	Numpad8::Send ^{Numpad8}
+	Numpad9::Send ^{Numpad9}
+	NumpadDot::Send ^{Numpad0}
+	Numpad0::
 		if(!WinExist("ahk_exe voicemeeterpro.exe")) {
 			Run, C:\Program Files (x86)\VB\Voicemeeter\voicemeeterpro.exe
 			return
@@ -226,72 +230,4 @@
 		}
 		WinActivate ahk_exe voicemeeterpro.exe
 		return
-
-	SC7B::
-		if(WinActive("ahk_class CabinetWClass")) {
-			Send +{AppsKey}
-			Send w
-			Send {Enter}
-		}
-		return
-
-	Insert::
-		SavedClipboard := ClipboardAll
-
-		Send ^c
-		Sleep 50
-		textToOwo := Clipboard
-		textToOwo := RegExReplace(textToOwo, "\s*(\n|\r\n)", A_Space)
-		textToOwo := RegExReplace(textToOwo, """", "\""")
-
-		Sleep 100
-		Clipboard := savedClipboard
-
-		owoed := stdOutToVar("owo-cli """ textToOwo """")
-		owoed := RegExReplace(owoed, "\s*(\n|\r\n)")
-
-		sendTextPreserveClipboard(owoed)
-
-		return
-	Delete::
-		SavedClipboard := ClipboardAll
-
-		Send ^c
-		Sleep 50
-		textToEmojify := Clipboard
-		textToEmojify := RegExReplace(textToEmojify, "\s*(\n|\r\n)", A_Space)
-		textToEmojify := RegExReplace(textToEmojify, """", "\""")
-
-		runCmd("node ./js/emojipasta.js """ textToEmojify """")
-		Sleep 1000
-		Send ^v
-
-		Sleep 100
-		Clipboard := savedClipboard
-
-		return
-	PgDn::
-		SavedClipboard := ClipboardAll
-
-		Sleep 50
-
-		url := stdOutToVar("node ./js/home-depot.js")
-		url := RegExReplace(url, "\s*(\n|\r\n)")
-
-		SendTextPreserveClipboard(url)
-
-		Sleep 100
-		Clipboard := savedClipboard
-
-		return
-	Numpad1::Send ^{Numpad1}
-	Numpad2::Send ^{Numpad2}
-	Numpad3::Send ^{Numpad3}
-	Numpad4::Send ^{Numpad4}
-	Numpad5::Send ^{Numpad5}
-	Numpad6::Send ^{Numpad6}
-	Numpad7::Send ^{Numpad7}
-	Numpad8::Send ^{Numpad8}
-	Numpad9::Send ^{Numpad9}
-	Numpad0::Send ^{Numpad0}
 #if

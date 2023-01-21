@@ -6,6 +6,7 @@
 ## Install
 This is mainly reference for me when installing things on a new system.
 
+- 7-Zip
 - `npm i -g chromix-too`
 - `chromix-too-server` on startup.
 - `npm i -g lorem-ipsum`
