@@ -144,10 +144,9 @@
 		return
 	SC7D::Winset, AlwaysOnTop, Toggle, A
 
-	; SC72::
-	; 	WinGetTitle, title, ahk_exe vlc.exe
-	; 	tippy2(stdOutToVar("vlc-song -p password"))
-	; 	return
+	SC72::
+		tippy2(getSpotifySong(spotify.Player.GetcurrentPlaybackInfo()))
+		return
 	Space::
 		WinGet, xPID, PID, A
 		Process, Close, %xPID%

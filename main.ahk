@@ -38,6 +38,9 @@
 #include random/random-uuid.ahk
 #include random/random-color.ahk
 
+#include spotify/Spotify.ahk
+#include spotify/lib/Spotify.ahk
+
 #include text/send-text-preserve-clipboard.ahk
 #include text/gen-random-emoji-string.ahk
 #include text/clap-text.ahk
@@ -77,6 +80,12 @@ GroupAdd, explorers, ahk_class CabinetWClass
 GroupAdd, chromes, ahk_exe chrome.exe
 GroupAdd, codes, ahk_exe Code.exe
 GroupAdd, notepads, ahk_exe notepad.exe
+
+; Spotify
+; THIS MUST RUN ON STARTUP
+spotify := new Spotify
+
+; ----- PLACE ALL AUTO-EXECUTE CODE ABOVE THIS -----
 
 ; Handle Escape press in GUI
 GuiEscape:
