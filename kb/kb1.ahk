@@ -1,6 +1,8 @@
 ﻿#if (getKeyState("CapsLock", "P"))	
+	; e.preventDefault()
 	*CapsLock::return
 
+	; For Spanish stuff. Probably no longer needed anymore.
 	!::Send ¡
 	E::Send é
 	+E::Send É
@@ -16,6 +18,7 @@
 	+N::Send Ñ
 	?::Send ¿
 
+	; Quick insert date and time stuff.
 	F1::
 		FormatTime, date,, yyyy-MM-dd
 		sendTextPreserveClipboard(date)
@@ -47,6 +50,8 @@
 
 		sendTextPreserveClipboard(date ": "longDate " " era " (Day " A_YDay " of 365) (Week " SubStr(week, 5) " of 52) at " time ":" A_MSec " EST (" unix ")")
 		return
+
+	; Text generation.
 	F5::sendTextPreserveClipboard(StrReplace(stdOutToVar("lorem-ipsum 1 sentence"), "`n"))
 	F6::sendTextPreserveClipboard(StrReplace(stdOutToVar("lorem-ipsum 1 paragraph"), "`n"))
 	F8::randomColor()
@@ -88,12 +93,16 @@
 	T::Send !x
 	Y::Send ​
 
+	; Cycles the currently focused window between monitors.
 	S::Send +#{Left}
 	D::Send +#{Right}
+	
 	G::Run, calc
 
 	Z::Run, notepad.exe
 	!Z::WinClose, ahk_group notepads
+
+	; My most used hotkeys. Transfers the currently focused window to the next/previous workspace/virtual desktop.
 	X::
 		global MoveWindowToDesktopNumberProc, GoToDesktopNumberProc, activeWindowByDesktop
 		current := DllCall(GetCurrentDesktopNumberProc, UInt)
@@ -124,6 +133,7 @@
 	Left::Send ←
 	Right::Send →
 
-	Numpad8::Send ∆
-	Numpad0::Send ₀
+	; I don't have a 100% anymore so these are useless to me.
+	; Numpad8::Send ∆
+	; Numpad0::Send ₀
 #if

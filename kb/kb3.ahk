@@ -1,4 +1,5 @@
 ﻿#if (getKeyState("F23", "P"))	
+	; Sort explorer items.
 	F1::
 		if(WinActive("ahk_class CabinetWClass")) {
 			sortByName()
@@ -19,15 +20,24 @@
 	F6::Run, "batch-rename.ahk", explorer
 	F7::toggleHiddenItems()
 	F8::toggleDesktopItems()
+
+	; New Google drive stuff. See the files for how they work, but they open a new URL.
 	F9::newDoc()
 	F10::newSheet()
 
+	; AHK
+	F12::Run, "C:\Program Files\AutoHotkey\WindowSpy.ahk"
+	PrintScreen::runCmd("code ""C:\2nd Keyboard""")
+	SC61::Reload
+
+	; Copies and displays the path of the currently selected item in explorer. 
 	SC29::
 		selected := getPathOfSelected()
 		Clipboard := selected
 		tippy2(selected)
 		return
-	SC0D::Run, "C:\Program Files\AutoHotkey\WindowSpy.ahk"
+	
+	; Does what it says.
 	Backspace::lockAndTurnOffScreens()
 
 	Tab::OpenOrFocus("http://localhost:8000/")
@@ -40,8 +50,6 @@
 		return
 	O::other()
 	P::sendTextPreserveClipboard(randomUuid())
-	SC1A::Reload
-	SC1B::runCmd("code ""C:\2nd Keyboard""")
 	^SC1B::OpenOrFocus("https://www.figma.com/file/4w2FsghkycPTEyNEiv06RE/Macro?node-id=606%3A2")
 	SC2B::trimVideo()
 
@@ -53,6 +61,7 @@
 
 		return
 	SC28::unzipLatest()
+	; Googles the currently highlighted text.
 	Enter::
 		SavedClipboard := Clipboard
 		Clipboard := ""
@@ -144,14 +153,16 @@
 		return
 	SC7D::Winset, AlwaysOnTop, Toggle, A
 
-	SC72::
-		tippy2(getSpotifySong(spotify.Player.GetcurrentPlaybackInfo()))
-		return
+	; It's back!
+	SC72::tippy2(getSpotifySong(spotify.Player.GetcurrentPlaybackInfo()), 1000)
+
+	; Force close.
 	Space::
 		WinGet, xPID, PID, A
 		Process, Close, %xPID%
 		return
 
+	; Opens a console at the path of the currently focused explorer window.
 	SC7B::
 		if(WinActive("ahk_class CabinetWClass")) {
 			Send +{AppsKey}

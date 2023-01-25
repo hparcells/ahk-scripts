@@ -61,6 +61,10 @@
 ; 	ExitApp
 ; }
 
+SetCapsLockState, AlwaysOff
+SetNumLockState, AlwaysOn
+SetScrollLockState, AlwaysOff
+
 ; This console thing.
 DllCall("AllocConsole")
 console := DllCall("GetConsoleWindow")
