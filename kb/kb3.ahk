@@ -189,7 +189,8 @@
 	; Changing keydelay to 50ms because OBS doesn't like instant keys.
 	NumLock::
 		SetKeyDelay, -1, 50
-		ControlSend, , ^+!{NumLock}, ahk_exe obs64.exe
+		; I cannot use NumLock or OBS behaves weirdly, but the rest of the keys are fine.
+		ControlSend, , ^+!{Insert}, ahk_exe obs64.exe
 		SetKeyDelay, 10
 		return
 	NumpadDiv::
