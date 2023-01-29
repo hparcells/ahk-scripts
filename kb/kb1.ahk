@@ -86,7 +86,31 @@
 
 		return
 
+	1::
+		DllCall(GoToDesktopNumberProc, UInt, 0)
+		tippy2("Desktop 1")
+		return
+	2::
+		DllCall(GoToDesktopNumberProc, UInt, 1)
+		tippy2("Desktop 2")
+		return
+	3::
+		DllCall(GoToDesktopNumberProc, UInt, 2)
+		tippy2("Desktop 3")
+		return
+	4::
+		DllCall(GoToDesktopNumberProc, UInt, 3)
+		tippy2("Desktop 4")
+		return
 	+4::Send §
+	5::
+		DllCall(GoToDesktopNumberProc, UInt, 4)
+		tippy2("Desktop 5")
+		return
+	6::
+		DllCall(GoToDesktopNumberProc, UInt, 5)
+		tippy2("Desktop 6")
+		return
 
 	Q::WinMinimize, A
 	W::Send #{Up}
