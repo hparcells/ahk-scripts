@@ -138,9 +138,12 @@
 	+B::OpenOrFocus("https://studio.youtube.com/")
 	^+B::Run, "https://studio.youtube.com/"
 	+!B::runBashCmd("chromix-too rm https://studio.youtube.com/")
-	N::OpenOrFocus("https://www.figma.com/")
-	^N::Run, "https://www.figma.com/"
-	!N::runBashCmd("chromix-too rm https://www.figma.com/")
+	N::
+		if(!WinExist("ahk_exe Figma.exe")) {
+			Run, C:\Users\Hunter\AppData\Local\Figma\app-116.8.5\Figma.exe
+		}
+		return
+	!N::WinClose, ahk_exe Figma.exe
 	M::OpenOrFocus("https://mail.google.com/mail/u/0/")
 	^M::Run "https://mail.google.com/mail/u/0/"
 	!M::runBashCmd("chromix-too rm https://mail.google.com/mail/u/0/")
