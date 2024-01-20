@@ -111,6 +111,10 @@
 		DllCall(GoToDesktopNumberProc, UInt, 5)
 		tippy2("Desktop 6")
 		return
+	7::
+		DllCall(GoToDesktopNumberProc, UInt, 6)
+		tippy2("Desktop 7")
+		return
 
 	Q::WinMinimize, A
 	W::Send #{Up}
