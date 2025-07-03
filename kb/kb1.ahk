@@ -111,6 +111,10 @@
 		DllCall(GoToDesktopNumberProc, UInt, 5)
 		tippy2("Desktop 6")
 		return
+	!6::
+		DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, 6)
+		tippy2("Moved to Desktop 6")
+		return
 	7::
 		DllCall(GoToDesktopNumberProc, UInt, 6)
 		tippy2("Desktop 7")
@@ -128,7 +132,7 @@
 	G::Run, calc
 
 	Z::Run, notepad.exe
-	!Z::WinClose, ahk_group notepads
+	!Z::WinClose, ahk_group notepadscccc
 
 	; My most used hotkeys. Transfers the currently focused window to the next/previous workspace/virtual desktop.
 	X::
@@ -156,8 +160,10 @@
 		return
 	Space::Send ^!{Right}
 
-	Up::Send ✓
-	Down::Send ✗
+	Up::Send ✅
+	^Up::Send ✓
+	Down::Send ❌
+	^Down::Send ✗
 	Left::Send ←
 	Right::Send →
 

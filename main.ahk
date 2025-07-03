@@ -90,7 +90,7 @@ GroupAdd, figmas, ahk_exe Figma.exe
 ; THIS MUST RUN ON STARTUP
 spotify := new Spotify
 
-; ----- PLACE ALL AUTO-EXECUTE CODE ABOVE THIS -----
+; ----- PLACE ALL AUTO-EXECUTE CODE  ^^^^^ABOVE THIS -----
 
 ; Handle Escape press in GUI
 GuiEscape:
