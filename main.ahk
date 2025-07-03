@@ -52,6 +52,7 @@
 #include util/tippy2.ahk
 #include util/clipboard.ahk
 #include util/calc.ahk
+#include util/desktop.ahk
 #include util/lock-and-turn-off-screens.ahk
 #include util/trim-video.ahk
 

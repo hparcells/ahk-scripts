@@ -3,20 +3,20 @@
 	*CapsLock::return
 
 	; For Spanish stuff. Probably no longer needed anymore.
-	!::Send ¡
-	E::Send é
-	+E::Send É
-	U::Send ú
-	+U::Send Ú
-	I::Send í
-	+I::Send Í
-	O::Send ó
-	+O::Send Ó
-	A::Send á
-	+A::Send Á
-	N::Send ñ
-	+N::Send Ñ
-	?::Send ¿
+	; !::Send ¡
+	; E::Send é
+	; +E::Send É
+	; U::Send ú
+	; +U::Send Ú
+	; I::Send í
+	; +I::Send Í
+	; O::Send ó
+	; +O::Send Ó
+	; A::Send á
+	; +A::Send Á
+	; N::Send ñ
+	; +N::Send Ñ
+	; ?::Send ¿
 
 	; Quick insert date and time stuff.
 	F1::
@@ -86,43 +86,45 @@
 
 		return
 
-	1::
-		DllCall(GoToDesktopNumberProc, UInt, 0)
-		tippy2("Desktop 1")
+	1::goToDesktop(0)
+	!1::moveActiveToDesktop(0)
+	2::goToDesktop(1)
+	!2::moveActiveToDesktop(1)
+	3::goToDesktop(2)
+	!3::moveActiveToDesktop(2)
+	4::goToDesktop(3)
+	!4::moveActiveToDesktop(3)
+	5::goToDesktop(4)
+	!5::moveActiveToDesktop(4)
+	6::goToDesktop(5)
+	!6::moveActiveToDesktop(5)
+	7::goToDesktop(6)
+	!7::moveActiveToDesktop(6)
+	8::goToDesktop(7)
+	!8::moveActiveToDesktop(7)
+	9::goToDesktop(8)
+	!9::moveActiveToDesktop(8)
+	Q::
+		WinMinimize, A
+		tippy2("Minimized")
 		return
-	2::
-		DllCall(GoToDesktopNumberProc, UInt, 1)
-		tippy2("Desktop 2")
+	W::
+		Send #{Up}
+		tippy2("Maximized")
 		return
-	3::
-		DllCall(GoToDesktopNumberProc, UInt, 2)
-		tippy2("Desktop 3")
+	E::
+		color := getColorAtCursor()
+		tippy2(color)
+		Clipboard := color
 		return
-	4::
-		DllCall(GoToDesktopNumberProc, UInt, 3)
-		tippy2("Desktop 4")
+	T::
+		; Requires https://acarabott.github.io/tabToWindow/
+		if(!WinActive("ahk_exe chrome.exe")) {
+			return
+		}
+		Send !x
+		tippy2("Splitting...")
 		return
-	+4::Send §
-	5::
-		DllCall(GoToDesktopNumberProc, UInt, 4)
-		tippy2("Desktop 5")
-		return
-	6::
-		DllCall(GoToDesktopNumberProc, UInt, 5)
-		tippy2("Desktop 6")
-		return
-	!6::
-		DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, 6)
-		tippy2("Moved to Desktop 6")
-		return
-	7::
-		DllCall(GoToDesktopNumberProc, UInt, 6)
-		tippy2("Desktop 7")
-		return
-
-	Q::WinMinimize, A
-	W::Send #{Up}
-	T::Send !x
 	Y::Send ​
 
 	; Cycles the currently focused window between monitors.
@@ -132,7 +134,7 @@
 	G::Run, calc
 
 	Z::Run, notepad.exe
-	!Z::WinClose, ahk_group notepadscccc
+	!Z::WinClose, ahk_group notepads
 
 	; My most used hotkeys. Transfers the currently focused window to the next/previous workspace/virtual desktop.
 	X::
