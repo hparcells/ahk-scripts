@@ -268,7 +268,23 @@ tippy2("Hello world!", 1000)
 		tippy2("Desktop " current + 1)
 		
 		return
-	B::Winset, AlwaysOnTop, Toggle, A
+	B::
+		Winset, AlwaysOnTop, Toggle, A
+		tippy2("Toggling AoT...")
+		return
+	N::
+		WinGet, transparency, Transparent, A
+		if (transparency = 255) {
+			Winset, Transparent, 190, A
+		} else if (transparency = 190) {
+			Winset, Transparent, 125, A
+		} else if (transparency = 125) {
+			Winset, Transparent, 255, A
+		}else {
+			Winset, Transparent, 190, A
+		}
+		tippy2("Toggling transparency...")
+		return
 
 	Up::Send ✅
 	^Up::Send ✓

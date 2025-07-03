@@ -154,7 +154,10 @@
 		sendTextPreserveClipboard("git add . && git commit -m """"")
 		Send {Left}
 		return
-	SC7D::Winset, AlwaysOnTop, Toggle, A
+	SC7D::
+		Winset, AlwaysOnTop, Toggle, A
+		tippy2("Toggling AoT...")
+		return
 
 	; It's back!
 	SC72::tippy2(getSpotifySong(spotify.Player.GetcurrentPlaybackInfo()), 1000)
