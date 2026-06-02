@@ -23,7 +23,7 @@ StrJoin(obj, delimiter := "", OmitChars := ""){
 }
 
 sendOther(file) {
-  sendTextPreserveClipboard2("https://otherzone.net/" file)
+  sendTextPreserveClipboard2(otherBaseUrl . file)
 }
 
 submit() {
@@ -46,7 +46,7 @@ other() {
   ; Get list of other files.
   whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
   ; URL to list of other files. One file per line, only file name and extension.
-  whr.Open("GET", "https://otherzone.net/list.txt", true)
+  whr.Open("GET", otherListUrl, true)
   whr.Send()
   whr.WaitForResponse()
   otherList := StrSplit(whr.ResponseText, "`r`n")

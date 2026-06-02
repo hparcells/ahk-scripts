@@ -30,6 +30,7 @@
 #include scripts/gsuite/sheets-clone-row.ahk
 #include scripts/gsuite/gsuite-new.ahk
 
+#include scripts/personal/send-other-config.ahk
 #include scripts/personal/send-other.ahk
 
 #include scripts/random/random-date.ahk

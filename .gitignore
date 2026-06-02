@@ -1,4 +1,5 @@
 .vscode
+scripts/personal/send-other-config.ahk
 intercept/
 interception/
 node_modules/
