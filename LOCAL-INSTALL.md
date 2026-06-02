@@ -10,7 +10,8 @@ Use and adjust `keyremap.ini` to use the desired keyboard device.
 
 Install the following tools.
 
-- [AutoHotkey v1.1](https://www.autohotkey.com/).
+- [Node.js](https://nodejs.org/en)
+- [AutoHotkey v1.1](https://www.autohotkey.com/)
 - [7-Zip](https://www.7-zip.org/)
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 
@@ -24,11 +25,24 @@ Install [Node.js](https://nodejs.org/en) with NPM. Run the following commands.
 - `cd js && npm i`
 - `npm i -g chromix-too lorem-ipsum`
 
-Ensure `chromix-too-server` within Bash runs on startup. This can be achieved using an AutoHotkey script in your startup directory.
+`chromix-too` CLI does not work on Windows for two reasons:
+1. A missing environment variable (`USERPROFILE`).
+2. Windows does not support `.sock` files. To fix this make a change to the following file. Replace the commented line with the uncommented line.
+
+```js
+// %appdata%/npm/node_modules/chromix-too/utils.js
+
+// sock: require("path").join(process.env["HOME"], ".chromix-too.sock"),
+sock: process.platform === "win32" ? "\\\\.\\pipe\\chromix-too" : require("path").join(process.env["HOME"], ".chromix-too.sock"),
+```
+
+- This change was made to reduce the delay when interacting with `chromix-too`. `chromix-too` was designed to be used on Unix systems, meaning a new Bash instance would have to be made for every `chromix-too` request from AutoHotkey.
+
+Ensure `chromix-too-server` runs on startup. This can be achieved using an AutoHotkey script in your startup directory.
 
 ```ahk
-; %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
-Run, bash.exe -c "chromix-too-server"
+; %appdata%/Microsoft/Windows/Start Menu/Programs/Startup
+Run, chromix-too-server
 ```
 
 The `chromix-too` Google Chrome extension was removed from the Chrome Web Store, and the bundled extension included with the NPM package uses Manifest V2 which is no longer supported. In this repository is `chromix-too-extension-mv3` with the following changes.

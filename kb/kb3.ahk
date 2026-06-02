@@ -45,7 +45,7 @@
 
 	Tab::openOrFocus("http://localhost:8000/")
 	^Tab::Run, "http://localhost:8000/"
-	!Tab::RunBashCmd("chromix-too rm localhost:8000")
+	!Tab::RunCmd("chromix-too rm localhost:8000")
 
 	R::
 		Send ^v
@@ -137,10 +137,10 @@
 	!V::WinClose, ahk_group codes
 	B::openOrFocus("https://www.youtube.com/")
 	^B::Run, "https://www.youtube.com/"
-	!B::runBashCmd("chromix-too rm https://www.youtube.com/")
+	!B::runCmd("chromix-too rm https://www.youtube.com/")
 	+B::openOrFocus("https://studio.youtube.com/")
 	^+B::Run, "https://studio.youtube.com/"
-	+!B::runBashCmd("chromix-too rm https://studio.youtube.com/")
+	+!B::runCmd("chromix-too rm https://studio.youtube.com/")
 	N::
 		if(!WinExist("ahk_exe Figma.exe")) {
 			Run, C:\Users\Hunter\AppData\Local\Figma\app-116.8.5\Figma.exe
@@ -149,10 +149,10 @@
 	!N::WinClose, ahk_exe Figma.exe
 	M::openOrFocus("https://mail.google.com/mail/u/0/")
 	^M::Run "https://mail.google.com/mail/u/0/"
-	!M::runBashCmd("chromix-too rm https://mail.google.com/mail/u/0/")
+	!M::runCmd("chromix-too rm https://mail.google.com/mail/u/0/")
 	,::openOrFocus("https://calendar.google.com/")
 	^,::Run, "https://calendar.google.com/"
-	!,::runBashCmd("chromix-too rm https://calendar.google.com/")
+	!,::runCmd("chromix-too rm https://calendar.google.com/")
 	.::
 		sendTextPreserveClipboard("git add . && git commit -m """"")
 		Send {Left}
