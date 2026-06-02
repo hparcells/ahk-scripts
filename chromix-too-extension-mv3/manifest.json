@@ -11,7 +11,8 @@
     "storage",
     "sessions",
     "notifications",
-    "webNavigation"
+    "webNavigation",
+    "alarms"
   ],
   "host_permissions": ["<all_urls>"],
   "background": {
