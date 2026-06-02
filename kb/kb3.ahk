@@ -28,7 +28,10 @@
 	; AHK
 	F12::Run, "C:\Program Files\AutoHotkey\WindowSpy.ahk"
 	PrintScreen::runCmd("code ""C:\2nd Keyboard""")
-	SC61::Reload
+	SC61::
+		tippy2("Reloading AHK...")
+		Reload
+		return
 
 	; Copies and displays the path of the currently selected item in explorer. 
 	SC29::
@@ -40,7 +43,7 @@
 	; Does what it says.
 	Backspace::lockAndTurnOffScreens()
 
-	Tab::OpenOrFocus("http://localhost:8000/")
+	Tab::openOrFocus("http://localhost:8000/")
 	^Tab::Run, "http://localhost:8000/"
 	!Tab::RunBashCmd("chromix-too rm localhost:8000")
 
@@ -50,7 +53,7 @@
 		return
 	O::other()
 	P::sendTextPreserveClipboard(randomUuid())
-	^SC1B::OpenOrFocus("https://www.figma.com/file/4w2FsghkycPTEyNEiv06RE/Macro?node-id=606%3A2")
+	^SC1B::openOrFocus("https://www.figma.com/file/4w2FsghkycPTEyNEiv06RE/Macro?node-id=606%3A2")
 	SC2B::trimVideo()
 
 	CapsLock::
@@ -132,10 +135,10 @@
 		return
 	^V::Run, C:\Users\Hunter\AppData\Local\Programs\Microsoft VS Code/Code.exe
 	!V::WinClose, ahk_group codes
-	B::OpenOrFocus("https://www.youtube.com/")
+	B::openOrFocus("https://www.youtube.com/")
 	^B::Run, "https://www.youtube.com/"
 	!B::runBashCmd("chromix-too rm https://www.youtube.com/")
-	+B::OpenOrFocus("https://studio.youtube.com/")
+	+B::openOrFocus("https://studio.youtube.com/")
 	^+B::Run, "https://studio.youtube.com/"
 	+!B::runBashCmd("chromix-too rm https://studio.youtube.com/")
 	N::
@@ -144,10 +147,10 @@
 		}
 		return
 	!N::WinClose, ahk_exe Figma.exe
-	M::OpenOrFocus("https://mail.google.com/mail/u/0/")
+	M::openOrFocus("https://mail.google.com/mail/u/0/")
 	^M::Run "https://mail.google.com/mail/u/0/"
 	!M::runBashCmd("chromix-too rm https://mail.google.com/mail/u/0/")
-	,::OpenOrFocus("https://calendar.google.com/")
+	,::openOrFocus("https://calendar.google.com/")
 	^,::Run, "https://calendar.google.com/"
 	!,::runBashCmd("chromix-too rm https://calendar.google.com/")
 	.::

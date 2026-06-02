@@ -2,8 +2,8 @@
 ; REQUIRES StdOutToVar.ahk
 ; REQUIRES RunCmd.ahk
 
-OpenOrFocus(url) {
-	tabs := stdOutToVar("bash.exe -c ""chromix-too ls""")
+openOrFocus(url) {
+	tabs := bashStdOutToVar("chromix-too ls")
 
 	if(InStr(tabs, url)) {
 		runBashCmd("chromix-too focus " url)

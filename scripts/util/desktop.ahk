@@ -9,5 +9,5 @@ moveActiveToDesktop(desktop) {
   WinGet, activeHwnd, ID, A
   DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, desktop)
 
-  tippy2("Moved to Desktop " desktop + 1, 1000)
+  tippy2("Moved to Desktop " desktop + 1)
 }

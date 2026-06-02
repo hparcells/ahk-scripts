@@ -16,7 +16,8 @@ Install the following tools.
 
 Run the following within WSL.
 
-- `sudo apt get apcalc`
+- `sudo apt-get install nodejs` 
+- `sudo apt-get install apcalc` 
 
 Install [Node.js](https://nodejs.org/en) with NPM. Run the following commands.
 
@@ -37,3 +38,5 @@ Run, bash.exe -c "chromix-too-server"
 - Move `<all_urls>` from `permissions` to `host_permissions` in `manifest.json`.
 - Add `importScripts('utils.js')` to top of `background.js`.
 - Replace `window` with `self` in `background.js` and `utils.js`.
+
+On first run, Spotify.ahk may ask for some permissions.

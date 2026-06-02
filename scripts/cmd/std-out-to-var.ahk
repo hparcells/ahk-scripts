@@ -6,6 +6,7 @@ stdOutToVar(command) {
 
   return result
 }
+
 bashStdOutToVar(command) {   
   shell := ComObjCreate("WScript.Shell")
   exec := shell.Exec("bash.exe -c """ command """")

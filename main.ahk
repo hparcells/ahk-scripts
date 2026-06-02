@@ -85,11 +85,12 @@ GroupAdd, explorers, ahk_class CabinetWClass
 GroupAdd, chromes, ahk_exe chrome.exe
 GroupAdd, codes, ahk_exe Code.exe
 GroupAdd, notepads, ahk_exe notepad.exe
-GroupAdd, figmas, ahk_exe Figma.exe
 
 ; Spotify
 ; THIS MUST RUN ON STARTUP
 spotify := new Spotify
+
+tippy2("Hello world!", 1000)
 
 ; ----- PLACE ALL AUTO-EXECUTE CODE  ^^^^^ABOVE THIS -----
 
