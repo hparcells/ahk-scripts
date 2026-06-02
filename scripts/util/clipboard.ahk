@@ -3,10 +3,9 @@
 copy(clipboardID) {
 	global
 	local oldClipboard := ClipboardAll
-	
 	Clipboard =
-	Send ^c
 
+	Send ^c
 	ClipWait, 2, 1
 	if(ErrorLevel) {
 		Clipboard := oldClipboard
@@ -28,5 +27,4 @@ paste(clipboardID) {
 	Sleep 100
 
 	Clipboard := oldClipboard
-	oldClipboard = 
 }

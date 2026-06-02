@@ -49,6 +49,7 @@
 #include scripts/util/brightness-setter.ahk
 #include scripts/util/tippy2.ahk
 #include scripts/util/clipboard.ahk
+#include scripts/util/clipstack.ahk
 #include scripts/util/calc.ahk
 #include scripts/util/desktop.ahk
 #include scripts/util/lock-and-turn-off-screens.ahk
