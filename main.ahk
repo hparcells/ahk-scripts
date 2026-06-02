@@ -3,58 +3,58 @@
 #SingleInstance force
 #MaxHotkeysPerInterval 42069
 
-#include chrome/open-or-focus.ahk
+#include scripts/chrome/open-or-focus.ahk
 
-#include cmd/run-cmd.ahk
-#include cmd/std-out-to-var.ahk
+#include scripts/cmd/run-cmd.ahk
+#include scripts/cmd/std-out-to-var.ahk
 
-#include discord/add-discord-reaction.ahk
-#include discord/send-latest-discord-message.ahk
-#include discord/navigate-discord.ahk
+#include scripts/discord/add-discord-reaction.ahk
+#include scripts/discord/send-latest-discord-message.ahk
+#include scripts/discord/navigate-discord.ahk
 
-#include explorer/select-random-item-in-folder.ahk
-#include explorer/upzip-latest.ahk
-#include explorer/create-folder-hierarchy.ahk
-#include explorer/explorer-getters.ahk
-#include explorer/select-by-regex.ahk
-#include explorer/change-explorer-icon-size.ahk
-#include explorer/paste-image.ahk
-#include explorer/change-explorer-sort.ahk
-#include explorer/toggle-hidden-items.ahk
-#include explorer/toggle-desktop-items.ahk
-#include explorer/get-path-of-selected.ahk
+#include scripts/explorer/select-random-item-in-folder.ahk
+#include scripts/explorer/upzip-latest.ahk
+#include scripts/explorer/create-folder-hierarchy.ahk
+#include scripts/explorer/explorer-getters.ahk
+#include scripts/explorer/select-by-regex.ahk
+#include scripts/explorer/change-explorer-icon-size.ahk
+#include scripts/explorer/paste-image.ahk
+#include scripts/explorer/change-explorer-sort.ahk
+#include scripts/explorer/toggle-hidden-items.ahk
+#include scripts/explorer/toggle-desktop-items.ahk
+#include scripts/explorer/get-path-of-selected.ahk
 
-#include game/google-crossword.ahk
+#include scripts/game/google-crossword.ahk
 
-#include gsuite/docs-hanging-indent.ahk
-#include gsuite/sheets-clone-row.ahk
-#include gsuite/gsuite-new.ahk
+#include scripts/gsuite/docs-hanging-indent.ahk
+#include scripts/gsuite/sheets-clone-row.ahk
+#include scripts/gsuite/gsuite-new.ahk
+
+#include scripts/personal/send-other.ahk
+
+#include scripts/random/random-date.ahk
+#include scripts/random/random-uuid.ahk
+#include scripts/random/random-color.ahk
+
+#include scripts/spotify/Spotify.ahk
+#include scripts/spotify/spotify-ahk/Spotify.ahk
+
+#include scripts/text/send-text-preserve-clipboard.ahk
+#include scripts/text/gen-random-emoji-string.ahk
+#include scripts/text/clap-text.ahk
+#include scripts/text/mock-text.ahk
+#include scripts/text/space-text.ahk
+
+#include scripts/util/get-color-at-cursor.ahk
+#include scripts/util/brightness-setter.ahk
+#include scripts/util/tippy2.ahk
+#include scripts/util/clipboard.ahk
+#include scripts/util/calc.ahk
+#include scripts/util/desktop.ahk
+#include scripts/util/lock-and-turn-off-screens.ahk
+#include scripts/util/trim-video.ahk
 
 #include lib/gdip.ahk
-
-#include personal/send-other.ahk
-
-#include random/random-date.ahk
-#include random/random-uuid.ahk
-#include random/random-color.ahk
-
-#include spotify/Spotify.ahk
-#include spotify/lib/Spotify.ahk
-
-#include text/send-text-preserve-clipboard.ahk
-#include text/gen-random-emoji-string.ahk
-#include text/clap-text.ahk
-#include text/mock-text.ahk
-#include text/space-text.ahk
-
-#include util/get-color-at-cursor.ahk
-#include util/brightness-setter.ahk
-#include util/tippy2.ahk
-#include util/clipboard.ahk
-#include util/calc.ahk
-#include util/desktop.ahk
-#include util/lock-and-turn-off-screens.ahk
-#include util/trim-video.ahk
 
 ; Force run as admin.
 ; if(!A_IsAdmin) {

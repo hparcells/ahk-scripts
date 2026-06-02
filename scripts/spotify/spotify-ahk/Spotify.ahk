@@ -714,7 +714,7 @@ class user {
 	}
 }
 
-#include spotify/lib/lib/AHKsock.ahk
-#include spotify/lib/lib/AHKhttp.ahk
-#include spotify/lib/lib/crypt.ahk
-#include spotify/lib/lib/json.ahk
+#include scripts/spotify/spotify-ahk/lib/AHKsock.ahk
+#include scripts/spotify/spotify-ahk/lib/AHKhttp.ahk
+#include scripts/spotify/spotify-ahk/lib/crypt.ahk
+#include scripts/spotify/spotify-ahk/lib/json.ahk
