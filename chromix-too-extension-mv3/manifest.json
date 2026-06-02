@@ -1,0 +1,20 @@
+{
+  "name": "Chromix-Too",
+  "version": "0.0.3",
+  "manifest_version": 3,
+  "description": "Command-line or scripted access to chrome's extension API.",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "history",
+    "clipboardRead",
+    "storage",
+    "sessions",
+    "notifications",
+    "webNavigation"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
